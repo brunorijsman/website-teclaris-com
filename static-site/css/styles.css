@@ -448,6 +448,7 @@ ul {
 
 .footer-brand img {
     margin-bottom: var(--spacing-sm);
+    /* Invert logo colors (black to white) for dark footer background */
     filter: brightness(0) invert(1);
 }
 
@@ -563,7 +564,9 @@ ul {
    Accessibility & Focus States
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
-    * {
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
